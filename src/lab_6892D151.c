@@ -1,11 +1,19 @@
 #include <stdio.h>
 
-long calculate_factorial(int number )
+long calculate_factorial(int number)
 {
-    // TODO: write your code here
-}
+    if (number < 0 || number > 20) {
+        return -1;
+    }
 
-// DO NOT change the code below
+    long result = 1;
+
+    for (int i = 1; i <= number; i++) {
+        result *= i;
+    }
+
+    return result;
+}
 #ifndef ___TEST___
 int main() {
     int number =- 1;
